@@ -9,7 +9,7 @@ const App: React.FC = () => {
   !localStorage.todos &&  localStorage.setItem('todos', JSON.stringify([]))
   const [todo, setTodo] = useState<string>("");
   const [todos, setTodos] = useState<Todo[]>( JSON.parse(localStorage.getItem("todos") || "" ));
-  const [completedTodos, setCompletedTodos] = useState<Todo[]> ([]);
+  
   const handleAddTodo = (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -32,7 +32,7 @@ const App: React.FC = () => {
         <h1 className="heading__title">Tasker.</h1>
       </div>  
       <InputField todo={todo} setTodo={setTodo} handleAddTodo={handleAddTodo} />
-      <TodoList todos={todos} setTodos={setTodos} completedTodos={completedTodos} setCompletedTodos={setCompletedTodos} />
+      <TodoList todos={todos} setTodos={setTodos}/>
     </div>
   );
 };
