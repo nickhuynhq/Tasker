@@ -23,8 +23,10 @@
         font-size: 1.5rem;
         border: none;
         transition: 0.2s;
+        background-color: $input-background;
 
         &:focus{
+            background-color: $input-background--focus;
             box-shadow: 0 0 .625rem 100vh rgba($shadow,0.5);
             outline: none;
         }
