@@ -2,13 +2,41 @@
 @use "../../styles/partials/colors" as *;
 @use "../../styles/partials/mixins" as *;
 
-.todos{
+.container{
     display: flex;
-    justify-content: space-evenly;
-    width: 90%;
-    flex-wrap: wrap;
+    width: 95%;
+    margin-top: 2rem;
+    justify-content: space-between;
+    align-items: flex-start;
 
     @include tablet{
+        width: 90%;
+    }
+
+    @include desktop{
         width: 80%;
+    }
+}
+.todos{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border-radius: .3125rem;
+    justify-content: space-between;
+    width: 47.5%;
+    background-color: $container-background;
+
+    @include tablet{
+        padding: 2rem;
+    }
+
+    &--completed{
+        @extend .todos;
+        background-color: $container-background--remove;
+    }
+
+    &__heading{
+        color: $main-text;
+        text-align: center;
     }
 }

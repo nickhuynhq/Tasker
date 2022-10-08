@@ -4,14 +4,21 @@
 
 .todos__card{
     display: flex;
+    flex-direction: column;
     width: 100%;
     border-radius: .3125rem;
     padding: 1.25rem;
     margin-top: .9375rem;
     background-color: $card-background;
+    transition: 0.3s;
 
-    @include desktop{
-        width: 33%;
+    &:hover{
+        box-shadow: 0 4px 10px $shadow;
+        transform: scale(1.03);
+    }
+
+    @include tablet{
+        flex-direction: row;
     }
 
     &--text{
@@ -34,6 +41,14 @@
     &__icons{
         display: flex;
         align-items: center;
+        justify-content: right;
+        margin-top: 1rem;
+
+        @include tablet{
+            justify-content: center;
+            margin-top: 0rem;
+            align-items: flex-end;
+        }
     }
 
     &__icon{

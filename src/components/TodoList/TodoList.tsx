@@ -3,18 +3,39 @@ import TodoCard from "../TodoCard/TodoCard";
 import "./TodoList.scss";
 
 interface Props {
-    todos: Todo[];
-    setTodos: React.Dispatch<React.SetStateAction<Todo[]>>;
+  todos: Todo[];
+  setTodos: React.Dispatch<React.SetStateAction<Todo[]>>;
 }
 
-const TodoList: React.FC<Props> = ({todos, setTodos}) => {
+const TodoList: React.FC<Props> = ({ todos, setTodos }) => {
   return (
-    <div className="todos">
-        {todos.map(todo => (
-            <TodoCard todo={todo} key={todo.id} todos={todos} setTodos={setTodos}/>
+    <div className="container">
+      <div className="todos">
+        <h2 className="todos__heading">Active Tasks</h2>
+        {todos.map((todo) => (
+          <TodoCard
+            todo={todo}
+            key={todo.id}
+            todos={todos}
+            setTodos={setTodos}
+          />
         ))}
-    </div>
-  )
-}
+      </div>
+      <div className="todos--completed">
+        <h2 className="todos__heading">Completed Tasks</h2>
+          {todos.map((todo) => (
 
-export default TodoList
+            
+            <TodoCard
+              todo={todo}
+              key={todo.id}
+              todos={todos}
+              setTodos={setTodos}
+            />
+          ))}
+      </div>
+    </div>
+  );
+};
+
+export default TodoList;
