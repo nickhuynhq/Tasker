@@ -55,5 +55,12 @@
         margin-left: .625rem;
         font-size: 1.5625rem;
         cursor: pointer;
+        transition: 0.3s;
+
+        &:hover{
+            @extend .todos__card__icon;
+            color: #5e81ac;
+            scale: 1.1;
+        }
     }
 }
