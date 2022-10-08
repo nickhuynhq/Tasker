@@ -10,12 +10,8 @@
     margin-top: .9375rem;
     background-color: $card-background;
 
-    @include tablet{
-        width: 40%;
-    }
-
     @include desktop{
-        width: 30%;
+        width: 33%;
     }
 
     &--text{
@@ -23,6 +19,21 @@
         padding: .3125rem;
         border: none;
         font-size: 1.25rem;
+    }
+
+    &--edit{
+        flex: 1;
+        width: 100%;
+        padding: .3125rem;
+        border-radius: .3125rem;
+        border: none;
+        background-color: rgb(200, 200, 200);
+        font-size: 1.25rem;
+    }
+
+    &__icons{
+        display: flex;
+        align-items: center;
     }
 
     &__icon{

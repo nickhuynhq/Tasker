@@ -3,6 +3,9 @@
 @use "./styles/partials/mixins" as *;
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
+*, ::before, ::after {
+  box-sizing: border-box;
+}
 
 .App{
   width: 100vw;
