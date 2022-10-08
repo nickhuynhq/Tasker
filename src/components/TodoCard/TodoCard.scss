@@ -1,0 +1,44 @@
+@use "../../styles/partials/breakpoints" as *;
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/mixins" as *;
+
+.todos__card{
+    display: flex;
+    width: 100%;
+    border-radius: .3125rem;
+    padding: 1.25rem;
+    margin-top: .9375rem;
+    background-color: $card-background;
+
+    @include desktop{
+        width: 33%;
+    }
+
+    &--text{
+        flex: 1;
+        padding: .3125rem;
+        border: none;
+        font-size: 1.25rem;
+    }
+
+    &--edit{
+        flex: 1;
+        width: 100%;
+        padding: .3125rem;
+        border-radius: .3125rem;
+        border: none;
+        background-color: rgb(200, 200, 200);
+        font-size: 1.25rem;
+    }
+
+    &__icons{
+        display: flex;
+        align-items: center;
+    }
+
+    &__icon{
+        margin-left: .625rem;
+        font-size: 1.5625rem;
+        cursor: pointer;
+    }
+}

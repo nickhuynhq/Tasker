@@ -1,35 +1,31 @@
-import './App.scss';
-import InputField from './components/InputField';
+import React, { useState } from "react";
+import "./App.scss";
+import InputField from "./components/InputField/InputField";
+import TodoList from "./components/TodoList/TodoList";
+import { Todo } from "./models/model";
 
-// let name: string;
-// let age:  number | string;
-// let hobbies: string[];
-// let role: [number, string];
+const App: React.FC = () => {
+  const [todo, setTodo] = useState<string>("");
+  const [todos, setTodos] = useState<Todo[]>([]);
 
-// interface Person {
-//   name: string;
-//   age: number;
-// }
+  const handleAddTodo = (e: React.FormEvent) => {
+    e.preventDefault();
 
-// let person: Person = {
-//   name: "Nick",
-//   age: 24,
-// }
+    if (todo){
+      // Spread the current todos list and add a new todo object
+      setTodos([...todos, {id: Date.now() , todo, isDone: false}])
+      // Reset the todo state to empty
+      setTodo("")
+    }
+  };
 
-// let lotsOfPeople: Person[];
-
-// role = [5, "string"]
-// name = 'Nick';
-
-// let printName: (name: string) => never;
-
-const App:React.FC = () => {
   return (
     <div className="App">
       <span className="heading">Tasker</span>
-      <InputField />
+      <InputField todo={todo} setTodo={setTodo} handleAddTodo={handleAddTodo} />
+      <TodoList todos={todos} setTodos={setTodos} />
     </div>
   );
-}
+};
 
 export default App;
