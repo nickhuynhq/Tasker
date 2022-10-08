@@ -1,6 +1,6 @@
 # TASKER.
 
-**Tasker is a task checklist application to help users view their to do and completed tasks**
+**Tasker is a task checklist application to help users view their to-do and completed tasks**
 
 This project was created to experiment with TypeScript with React as well as to help myself create tasks which can be saved in local storage.
 I was able to learn a lot about the benefits of TypeScript and will be definitely using it in the future!
