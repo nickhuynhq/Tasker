@@ -1,5 +1,5 @@
 import './App.scss';
-import InputField from './components/InputField';
+import InputField from './components/InputField/InputField';
 
 // let name: string;
 // let age:  number | string;
