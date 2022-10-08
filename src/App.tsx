@@ -6,7 +6,7 @@ import { Todo } from "./models/model";
 import Logo from "./assets/logo/tasker_logo.png"
 
 const App: React.FC = () => {
-  localStorage.setItem('todos', JSON.stringify([]))
+  !localStorage.todos &&  localStorage.setItem('todos', JSON.stringify([]))
   const [todo, setTodo] = useState<string>("");
   const [todos, setTodos] = useState<Todo[]>( JSON.parse(localStorage.getItem("todos") || "" ));
   const [completedTodos, setCompletedTodos] = useState<Todo[]> ([]);
