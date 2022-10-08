@@ -12,14 +12,14 @@ https://carma-island-app.herokuapp.com/
 
 ![App Screenshot](https://firebasestorage.googleapis.com/v0/b/carma-95b63.appspot.com/o/carma-mockup.jpg?alt=media&token=d7020ff0-a393-476c-be1d-1d2c99bb06e4)
 
-
 ## Tech Stacks
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
+
 ## Installation
 
 1. Clone this repository.
@@ -40,3 +40,7 @@ $ npm install
 ## Author
 
 Nicholas Huynh [@nickhuynhq](https://github.com/nickhuynhq)
+
+## Acknowledgements
+Followed a great tutorial by Piyush from freecodecamp.org which you can [check out here](https://www.youtube.com/watch?v=FJDVKeh7RJI&t)
+Also special thanks to [Arctic Ice Studio](https://www.nordtheme.com/docs/colors-and-palettes) for providing the Nord Theme colour palatte!
