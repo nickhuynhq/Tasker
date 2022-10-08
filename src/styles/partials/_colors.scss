@@ -1,10 +1,16 @@
 // Main Color Palatte
-$background: #2F74C0;
+$background: #3b4252;
 $main-text: white;
-$shadow: black;
+$shadow: #2e3440;
+
+$input-background: #e5e9f0;
+$input-background--focus: white;
 
 $button-text: white;
-$button-background: #2F74C0;
-$button-background--hover: #388ae2;
+$button-background: #d08770;
+$button-background--hover: #ebcb8b;
 
-$card-background: White;
+$card-background: #eceff4;
+
+$container-background: #a3be8c;
+$container-background--remove: #bf616a;

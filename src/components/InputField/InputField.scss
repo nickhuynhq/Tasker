@@ -23,9 +23,10 @@
         font-size: 1.5rem;
         border: none;
         transition: 0.2s;
-        box-shadow: inset 0 0 .3125rem $shadow;
+        background-color: $input-background;
 
         &:focus{
+            background-color: $input-background--focus;
             box-shadow: 0 0 .625rem 100vh rgba($shadow,0.5);
             outline: none;
         }
@@ -33,17 +34,17 @@
 
     &__submit{
         position: absolute;
-        width: 3.125rem;
+        width: 5.125rem;
         height: 3.125rem;
         margin: .75rem;
         border-radius: 3.125rem;
         right: 0;
         border: none;
         font-size: .9375rem;
+        font-weight: bold;
         background-color: $button-background;
         color: $button-text;
         transition: 0.2s all;
-        box-shadow: inset 0 0 .3125rem $shadow;
 
         &:hover{
             background-color: $button-background--hover;
