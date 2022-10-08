@@ -6,7 +6,7 @@ This project was created to experiment with TypeScript with React as well as to 
 I was able to learn a lot about the benefits of TypeScript and will be definitely using it in the future!
 
 Please use this link to demo the live site!
-https://carma-island-app.herokuapp.com/
+https://ts-tasker-app.netlify.app/
 
 ## Project Screenshot
 
