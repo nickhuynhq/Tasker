@@ -8,6 +8,14 @@ I was able to learn a lot about the benefits of TypeScript and will be definitel
 Please use this link to demo the live site!
 https://ts-tasker-app.netlify.app/
 
+
+## Update Notes
+**(October 9, 2022)**
+- Add drag and drop functionality to application
+- Fix bug where clicking done on task does not take it to completed tasks
+- Styling adjustments
+- Add haptics and vibration for touchscreen and mobile users
+
 ## Project Screenshot
 
 ![App Screenshot](https://firebasestorage.googleapis.com/v0/b/tasker-f4636.appspot.com/o/Tracker.jpg?alt=media&token=c3aa2218-4248-4bac-b2ba-1bfa38b639c6)
@@ -43,4 +51,5 @@ Nicholas Huynh [@nickhuynhq](https://github.com/nickhuynhq)
 
 ## Acknowledgements
 Followed a great tutorial by Piyush from freecodecamp.org which you can [check out here](https://www.youtube.com/watch?v=FJDVKeh7RJI&t)
+
 Also special thanks to [Arctic Ice Studio](https://www.nordtheme.com/docs/colors-and-palettes) for providing the Nord Theme colour palatte!
