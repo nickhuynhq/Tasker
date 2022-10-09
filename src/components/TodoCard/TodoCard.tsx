@@ -14,24 +14,31 @@ type Props = {
   setOtherTodos: React.Dispatch<React.SetStateAction<Todo[]>>;
 };
 
-const TodoCard = ({ index, todo, todos, otherTodos, setTodos, setOtherTodos }: Props) => {
+const TodoCard = ({
+  index,
+  todo,
+  todos,
+  otherTodos,
+  setTodos,
+  setOtherTodos,
+}: Props) => {
   const [edit, setEdit] = useState<boolean>(false);
   const [editTodo, setEditTodo] = useState<string>(todo.todo);
   const inputRef = useRef<HTMLInputElement>(null);
 
   const handleDone = (id: number) => {
+    // Set oppsite task container array
     const newOtherTodos = otherTodos;
-
     setTodos(
       todos.filter((todo) => {
         if (todo.id === id) {
           // if todo id matches, set isDone property to the inverse
-          newOtherTodos.push({...todo, isDone: !todo.isDone})
+          newOtherTodos.push({ ...todo, isDone: !todo.isDone });
         }
-        return todo.id !== id
+        return todo.id !== id;
       })
     );
-    setOtherTodos(newOtherTodos)
+    setOtherTodos(newOtherTodos);
   };
 
   const handleDelete = (id: number) => {
@@ -56,7 +63,13 @@ const TodoCard = ({ index, todo, todos, otherTodos, setTodos, setOtherTodos }: P
   return (
     <Draggable draggableId={todo.id.toString()} index={index}>
       {(provided, snapshot) => (
-        <form className={`todos__card ${snapshot.isDragging ? "drag" : ""}`} onSubmit={(e) => handleEdit(e, todo.id)} {...provided.draggableProps} {...provided.dragHandleProps} ref={provided.innerRef}>
+        <form
+          className={`todos__card ${snapshot.isDragging ? "drag" : ""}`}
+          onSubmit={(e) => handleEdit(e, todo.id)}
+          {...provided.draggableProps}
+          {...provided.dragHandleProps}
+          ref={provided.innerRef}
+        >
           {
             // If the todo card is being edited change the text to an input field
             // Else, display the todo card text as is
@@ -75,7 +88,7 @@ const TodoCard = ({ index, todo, todos, otherTodos, setTodos, setOtherTodos }: P
             )
           }
 
-          <div className="todos__card__icons">
+          <div title="Edit" className="todos__card__icons">
             <span
               className="todos__card__icon"
               onClick={() => {
@@ -87,19 +100,20 @@ const TodoCard = ({ index, todo, todos, otherTodos, setTodos, setOtherTodos }: P
             >
               <AiFillEdit />
             </span>
-
-            <span className="todos__card__icon">
+            <span title="Delete" className="todos__card__icon--delete">
               <AiFillDelete onClick={() => handleDelete(todo.id)} />
             </span>
-
-            <span className="todos__card__icon" onClick={() => handleDone(todo.id)}>
+            <span
+              title="Complete"
+              className="todos__card__icon"
+              onClick={() => handleDone(todo.id)}
+            >
               <MdDone />
             </span>
           </div>
         </form>
       )}
     </Draggable>
-   
   );
 };
 

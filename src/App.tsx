@@ -29,6 +29,13 @@ const App: React.FC = () => {
     }
   };
 
+  // Enable touch vibration on mobile or tablet
+  const onDragStart = () => {
+    if (window.navigator.vibrate) {
+      window.navigator.vibrate(100);
+    }
+  };
+
   // Track the source and destination of the draggable component
   const onDragEnd = (result: DropResult) => {
     const { source, destination } = result;
@@ -58,10 +65,10 @@ const App: React.FC = () => {
     // Check the destination
     if (destination.droppableId === "TodosList") {
       // Take add variable and splice it into the destination
-      active.splice(destination.index, 0, {...add, isDone: false});
+      active.splice(destination.index, 0, { ...add, isDone: false });
     } else {
       // Take add variable and splice it into the destination
-      complete.splice(destination.index, 0, {...add, isDone: true});
+      complete.splice(destination.index, 0, { ...add, isDone: true });
     }
 
     // Set the states of the containers to the dragged variables
@@ -76,17 +83,19 @@ const App: React.FC = () => {
   }, [todos, completedTodos]);
 
   return (
-    <DragDropContext onDragEnd={onDragEnd}>
+    <DragDropContext onDragStart={onDragStart} onDragEnd={onDragEnd}>
       <div className="App">
         <div className="heading">
-          <img className="heading__logo" src={Logo} alt="Tasker Logo" />
-          <h1 className="heading__title">Tasker.</h1>
+          <div className="heading__top">
+            <img className="heading__logo" src={Logo} alt="Tasker Logo" />
+            <h1 className="heading__title">Tasker.</h1>
+          </div>
+          <InputField
+            todo={todo}
+            setTodo={setTodo}
+            handleAddTodo={handleAddTodo}
+          />
         </div>
-        <InputField
-          todo={todo}
-          setTodo={setTodo}
-          handleAddTodo={handleAddTodo}
-        />
         <TodoList
           todos={todos}
           setTodos={setTodos}

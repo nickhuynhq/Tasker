@@ -66,6 +66,15 @@
             color: #5e81ac;
             scale: 1.1;
         }
+
+        &--delete{
+            @extend .todos__card__icon;
+            &:hover{
+                @extend .todos__card__icon;
+                color: #bf616a;
+                scale: 1.1;
+            }
+        }
     }
 }
 
