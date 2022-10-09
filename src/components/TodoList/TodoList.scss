@@ -7,11 +7,12 @@
     flex-direction: column;
     width: 95%;
     margin-top: 2rem;
-    justify-content: space-between;
     align-items: center;
     height: 80vh;
+    transition: 0.3s;
 
     @include tablet{
+        justify-content: space-between;
         flex-direction: row;
         align-items: flex-start;
         width: 90%;
@@ -27,9 +28,9 @@
     padding: 1rem;
     border-radius: .3125rem;
     width: 95%;
-    height: 100%;
     margin-bottom: 1rem;
     background-color: $container-background;
+    transition: 0.3s;
    
     @include tablet{
         padding: 2rem;
@@ -38,11 +39,24 @@
 
     &--completed{
         @extend .todos;
-        background-color: $container-background--remove;
+        background-color: $container-background-remove;
     }
 
     &__heading{
+        font-size: 1.5rem;
         color: $main-text;
         text-align: center;
+
+        @include tablet{
+            font-size: 1.8rem;
+        }
     }
+}
+
+.drag-active{
+    background-color: $container-background--active;
+}
+
+.drag-complete{
+    background-color: $container-background-remove--active;
 }
