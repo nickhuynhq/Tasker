@@ -1,6 +1,7 @@
 # TASKER.
 
 **Tasker is an intuitive task checklist application to help users manage their active and completed tasks.**
+
 **Now with drag and drop functionality for your task cards! :D**
 
 This project was created to experiment with TypeScript with React as well as to help myself create tasks which can be saved in local storage.
