@@ -5,6 +5,7 @@ import TodoList from "./components/TodoList/TodoList";
 import { Todo } from "./models/model";
 import { DragDropContext, DropResult } from "react-beautiful-dnd";
 import Logo from "./assets/logo/tasker_logo.png";
+import Footer from "./components/Footer/Footer";
 
 const App: React.FC = () => {
   !localStorage.todos && localStorage.setItem("todos", JSON.stringify([]));
@@ -103,6 +104,7 @@ const App: React.FC = () => {
           setCompletedTodos={setCompletedTodos}
         />
       </div>
+      <Footer />
     </DragDropContext>
   );
 };

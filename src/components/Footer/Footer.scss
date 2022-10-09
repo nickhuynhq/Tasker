@@ -1,0 +1,50 @@
+@use "../../styles/partials/breakpoints" as *;
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/mixins" as *;
+
+.footer{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem 10%;
+    background-color: #2E3440;
+    color: white;
+    
+    &__column{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title{
+        font-size: 1rem;
+        font-weight: 700;
+
+        @include tablet{
+            font-size: 2rem;
+        }
+    }
+
+    &__text{
+    }
+
+    &__link{
+        color: white;
+    }
+
+    &__icon{
+        filter: invert(1);
+        width: 2.5rem;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover{
+            filter: invert(75%) sepia(25%) saturate(366%) hue-rotate(49deg) brightness(94%) contrast(86%);
+        }
+
+        @include tablet{
+            width: 4rem;
+        }
+    }
+}
