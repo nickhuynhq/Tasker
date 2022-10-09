@@ -1,3 +1,4 @@
+import { Droppable } from "react-beautiful-dnd";
 import { Todo } from "../../models/model";
 import TodoCard from "../TodoCard/TodoCard";
 import "./TodoList.scss";
@@ -5,36 +6,53 @@ import "./TodoList.scss";
 interface Props {
   todos: Todo[];
   setTodos: React.Dispatch<React.SetStateAction<Todo[]>>;
+  completedTodos: Todo[];
+  setCompletedTodos: React.Dispatch<React.SetStateAction<Todo[]>>;
 }
 
-const TodoList: React.FC<Props> = ({ todos, setTodos }) => {
+const TodoList: React.FC<Props> = ({ todos, setTodos, completedTodos, setCompletedTodos }) => {
   return (
-
+   
     <div className="container">
-      <div className="todos">
-        <h2 className="todos__heading">Active Tasks</h2>
-        {todos.map((todo) => (
-          todo.isDone === false &&
-          <TodoCard
-            todo={todo}
-            key={todo.id}
-            todos={todos}
-            setTodos={setTodos}
-          />
-        ))}
-      </div>
-      <div className="todos--completed">
-        <h2 className="todos__heading">Completed Tasks</h2>
-          {todos.map((todo) => (
-            todo.isDone === true &&
-            <TodoCard
-              todo={todo}
-              key={todo.id}
-              todos={todos}
-              setTodos={setTodos}
-            />
-          ))}
-      </div>
+      <Droppable droppableId="TodosList">
+        {(provided, snapshot) => (
+          <div className={`todos ${snapshot.isDraggingOver ? "drag-active" : ""}`} ref={provided.innerRef} {...provided.droppableProps}>
+            <span className="todos__heading">Active Tasks</span>
+            {todos.map((todo, index) => (
+              <TodoCard
+                index={index}
+                key={todo.id}
+                todo={todo}
+                todos={todos}
+                setTodos={setTodos}
+                otherTodos={completedTodos}
+                setOtherTodos={setCompletedTodos}
+              />
+            ))}
+            {provided.placeholder}
+          </div>
+        )}
+      </Droppable>
+
+      <Droppable droppableId="TodosCompleted">
+        {(provided, snapshot) => (
+          <div className={`todos--completed ${snapshot.isDraggingOver ? "drag-complete" : ""}`} ref={provided.innerRef} {...provided.droppableProps}>
+            <span className="todos__heading">Completed Tasks</span>
+              {completedTodos.map((todo, index) =>(
+                <TodoCard
+                  index={index}
+                  key={todo.id}
+                  todo={todo}
+                  todos={completedTodos}
+                  setTodos={setCompletedTodos}
+                  otherTodos={todos}
+                  setOtherTodos={setTodos}
+                />
+              ))}
+              {provided.placeholder}
+          </div>
+        )}
+      </Droppable>
     </div>
   );
 };

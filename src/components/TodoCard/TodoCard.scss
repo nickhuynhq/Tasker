@@ -25,7 +25,11 @@
         flex: 1;
         padding: .3125rem;
         border: none;
-        font-size: 1.25rem;
+        font-size: 1rem;
+
+        @include tablet{
+            font-size: 1.25rem;
+        }
     }
 
     &--edit{
@@ -62,5 +66,18 @@
             color: #5e81ac;
             scale: 1.1;
         }
+
+        &--delete{
+            @extend .todos__card__icon;
+            &:hover{
+                @extend .todos__card__icon;
+                color: #bf616a;
+                scale: 1.1;
+            }
+        }
     }
+}
+
+.drag{
+    box-shadow: 0 0 1.25rem $shadow;
 }
