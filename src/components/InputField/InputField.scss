@@ -49,6 +49,7 @@
     background-color: $button-background;
     color: $button-text;
     transition: 0.2s all;
+    cursor: pointer;
 
     @include tablet{
         font-size: 1.25rem;

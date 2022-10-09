@@ -8,11 +8,16 @@ import Logo from "./assets/logo/tasker_logo.png";
 
 const App: React.FC = () => {
   !localStorage.todos && localStorage.setItem("todos", JSON.stringify([]));
+  !localStorage.completedTodos &&
+    localStorage.setItem("completedTodos", JSON.stringify([]));
+
   const [todo, setTodo] = useState<string>("");
   const [todos, setTodos] = useState<Todo[]>(
     JSON.parse(localStorage.getItem("todos") || "")
   );
-  const [completedTodos, setCompletedTodos] = useState<Todo[]>([]);
+  const [completedTodos, setCompletedTodos] = useState<Todo[]>(
+    JSON.parse(localStorage.getItem("completedTodos") || "")
+  );
 
   const handleAddTodo = (e: React.FormEvent) => {
     e.preventDefault();
@@ -23,11 +28,6 @@ const App: React.FC = () => {
       setTodo("");
     }
   };
-
-  // Set and save to localStorage upon change
-  useEffect(() => {
-    localStorage.setItem("todos", JSON.stringify(todos));
-  }, [todos]);
 
   // Track the source and destination of the draggable component
   const onDragEnd = (result: DropResult) => {
@@ -40,32 +40,40 @@ const App: React.FC = () => {
     )
       return;
 
-    let add, active = todos, complete = completedTodos;
-    
+    let add,
+      active = [...todos],
+      complete = [...completedTodos];
+
     // Check the source
-    if(source.droppableId === "TodosList") {
+    if (source.droppableId === "TodosList") {
       // If todo card is in Active container, set add and remove it from Active
       add = active[source.index];
-      active.splice(source.index, 1)
+      active.splice(source.index, 1);
     } else {
       // If todo card is in Completed container, set add and remove it from Completed
-      add = complete[source.index]
-      complete.splice(source.index, 1)
+      add = complete[source.index];
+      complete.splice(source.index, 1);
     }
 
     // Check the destination
-    if(destination.droppableId === "TodosList") {
-      // Take add variable and splice it into the destination 
-      active.splice(destination.index, 0, add)
+    if (destination.droppableId === "TodosList") {
+      // Take add variable and splice it into the destination
+      active.splice(destination.index, 0, add);
     } else {
-            // Take add variable and splice it into the destination 
-      complete.splice(destination.index, 0, add)
+      // Take add variable and splice it into the destination
+      complete.splice(destination.index, 0, add);
     }
 
     // Set the states of the containers to the dragged variables
     setCompletedTodos(complete);
     setTodos(active);
   };
+
+  // Set and save to localStorage upon change
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+    localStorage.setItem("completedTodos", JSON.stringify(completedTodos));
+  }, [todos, completedTodos]);
 
   return (
     <DragDropContext onDragEnd={onDragEnd}>
