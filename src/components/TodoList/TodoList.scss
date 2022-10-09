@@ -51,6 +51,13 @@
             font-size: 1.8rem;
         }
     }
+
+    &__message{
+        margin-top: 1rem;
+        font-size: 1.25rem;
+        color: white;
+        text-align: center;
+    }
 }
 
 .drag-active{
