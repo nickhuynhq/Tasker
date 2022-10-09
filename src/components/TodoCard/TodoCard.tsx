@@ -9,21 +9,29 @@ type Props = {
   index: number;
   todo: Todo;
   todos: Todo[];
+  otherTodos: Todo[];
   setTodos: React.Dispatch<React.SetStateAction<Todo[]>>;
+  setOtherTodos: React.Dispatch<React.SetStateAction<Todo[]>>;
 };
 
-const TodoCard = ({ index, todo, todos, setTodos }: Props) => {
+const TodoCard = ({ index, todo, todos, otherTodos, setTodos, setOtherTodos }: Props) => {
   const [edit, setEdit] = useState<boolean>(false);
   const [editTodo, setEditTodo] = useState<string>(todo.todo);
   const inputRef = useRef<HTMLInputElement>(null);
 
   const handleDone = (id: number) => {
+    const newOtherTodos = otherTodos;
+
     setTodos(
-      todos.map((todo) =>
-        // if todo id matches, set isDone property to the inverse
-        todo.id === id ? { ...todo, isDone: !todo.isDone } : todo
-      )
+      todos.filter((todo) => {
+        if (todo.id === id) {
+          // if todo id matches, set isDone property to the inverse
+          newOtherTodos.push({...todo, isDone: !todo.isDone})
+        }
+        return todo.id !== id
+      })
     );
+    setOtherTodos(newOtherTodos)
   };
 
   const handleDelete = (id: number) => {

@@ -58,10 +58,10 @@ const App: React.FC = () => {
     // Check the destination
     if (destination.droppableId === "TodosList") {
       // Take add variable and splice it into the destination
-      active.splice(destination.index, 0, add);
+      active.splice(destination.index, 0, {...add, isDone: false});
     } else {
       // Take add variable and splice it into the destination
-      complete.splice(destination.index, 0, add);
+      complete.splice(destination.index, 0, {...add, isDone: true});
     }
 
     // Set the states of the containers to the dragged variables
