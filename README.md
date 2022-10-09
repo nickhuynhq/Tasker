@@ -13,6 +13,7 @@ https://ts-tasker-app.netlify.app/
 **(October 9, 2022)**
 - Add drag and drop functionality to application
 - Fix bug where clicking done on task does not take it to completed tasks
+- Add task count
 - Styling adjustments
 - Add haptics and vibration for touchscreen and mobile users
 
