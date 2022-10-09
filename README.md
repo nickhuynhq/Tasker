@@ -24,7 +24,7 @@ https://ts-tasker-app.netlify.app/
 
 ![App Screenshot](https://firebasestorage.googleapis.com/v0/b/tasker-f4636.appspot.com/o/Tracker.jpg?alt=media&token=c3aa2218-4248-4bac-b2ba-1bfa38b639c6)
 
-## Tech Stacks
+## Tech Stack
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
