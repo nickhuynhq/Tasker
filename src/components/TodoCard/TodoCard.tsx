@@ -110,7 +110,7 @@ const TodoCard = ({
 
             
               <span
-                title="Complete"
+                title={!todo.isDone ? "Complete" : "Undo"}
                 className="todos__card__icon"
                 onClick={() => handleDone(todo.id)}
               >
