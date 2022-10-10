@@ -24,7 +24,7 @@ https://ts-tasker-app.netlify.app/
 ![App Screenshot](https://firebasestorage.googleapis.com/v0/b/tasker-f4636.appspot.com/o/Tracker.jpg?alt=media&token=c3aa2218-4248-4bac-b2ba-1bfa38b639c6)
 
 ## Project DEMO
-![App Demo](https://firebasestorage.googleapis.com/v0/b/tasker-f4636.appspot.com/o/Tasker%20-%20Checklist%20App%20-%209%20October%202022.gif?alt=media&token=1d415346-51e6-4ddd-a4fb-6c3e4bd452e1)
+![App Demo](https://firebasestorage.googleapis.com/v0/b/tasker-f4636.appspot.com/o/Tasker_DEMO.gif?alt=media&token=74e9c4a9-7190-4aef-b720-cf037f85c1ff)
 
 ## Tech Stack
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
