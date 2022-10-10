@@ -3,6 +3,7 @@ import { Todo } from "../../models/model";
 import "./TodoCard.scss";
 import { AiFillEdit, AiFillDelete } from "react-icons/ai";
 import { MdDone } from "react-icons/md";
+import {IoIosUndo} from "react-icons/io"
 import { Draggable } from "react-beautiful-dnd";
 
 type Props = {
@@ -89,27 +90,33 @@ const TodoCard = ({
           }
 
           <div title="Edit" className="todos__card__icons">
-            <span
-              className="todos__card__icon"
-              onClick={() => {
-                // Switch between edit modes
-                if (!edit && !todo.isDone) {
-                  setEdit(!edit);
-                }
-              }}
-            >
-              <AiFillEdit />
-            </span>
+            {!todo.isDone && (
+              <span
+                className="todos__card__icon"
+                onClick={() => {
+                  // Switch between edit modes
+                  if (!edit && !todo.isDone) {
+                    setEdit(!edit);
+                  }
+                }}
+              >
+                <AiFillEdit />
+              </span>
+            )}
+
             <span title="Delete" className="todos__card__icon--delete">
               <AiFillDelete onClick={() => handleDelete(todo.id)} />
             </span>
-            <span
-              title="Complete"
-              className="todos__card__icon"
-              onClick={() => handleDone(todo.id)}
-            >
-              <MdDone />
-            </span>
+
+            
+              <span
+                title="Complete"
+                className="todos__card__icon"
+                onClick={() => handleDone(todo.id)}
+              >
+                {!todo.isDone ? <MdDone /> : <IoIosUndo />}
+              </span>
+            
           </div>
         </form>
       )}
