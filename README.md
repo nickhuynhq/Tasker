@@ -11,6 +11,12 @@ Please use this link to demo the live site!
 https://ts-tasker-app.netlify.app/
 
 
+## Project Screenshot
+![App Screenshot](https://firebasestorage.googleapis.com/v0/b/tasker-f4636.appspot.com/o/Tracker.jpg?alt=media&token=c3aa2218-4248-4bac-b2ba-1bfa38b639c6)
+
+## Project DEMO
+![App Demo](https://firebasestorage.googleapis.com/v0/b/tasker-f4636.appspot.com/o/Tasker_DEMO%20(1).gif?alt=media&token=29d2ea09-53e0-4dce-8d9d-7a5f611417dd)
+
 ## Update Notes
 **(October 9, 2022)**
 - Add drag and drop functionality to application
@@ -19,12 +25,6 @@ https://ts-tasker-app.netlify.app/
 - Add task count
 - UI and Styling adjustments
 - Add Footer section at bottom of page
-
-## Project Screenshot
-![App Screenshot](https://firebasestorage.googleapis.com/v0/b/tasker-f4636.appspot.com/o/Tracker.jpg?alt=media&token=c3aa2218-4248-4bac-b2ba-1bfa38b639c6)
-
-## Project DEMO
-![App Demo](https://firebasestorage.googleapis.com/v0/b/tasker-f4636.appspot.com/o/Tasker_DEMO%20(1).gif?alt=media&token=29d2ea09-53e0-4dce-8d9d-7a5f611417dd)
 
 ## Tech Stack
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
