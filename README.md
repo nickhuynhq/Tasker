@@ -12,7 +12,7 @@ https://ts-tasker-app.netlify.app/
 
 
 ## Project Screenshot
-![App Screenshot](https://user-images.githubusercontent.com/71597829/200607980-f4490d13-87ba-408f-8c79-29c6548d5183.jpg)
+![tasker](https://user-images.githubusercontent.com/71597829/214969985-a9e8c8f3-53d2-4f92-90fd-44e31649d31d.jpg)
 
 ## Project DEMO
 ![App Demo](https://firebasestorage.googleapis.com/v0/b/tasker-f4636.appspot.com/o/Tasker_DEMO%20(1).gif?alt=media&token=29d2ea09-53e0-4dce-8d9d-7a5f611417dd)
