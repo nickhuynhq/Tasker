@@ -17,15 +17,6 @@ https://ts-tasker-app.netlify.app/
 ## Project DEMO
 ![App Demo](https://firebasestorage.googleapis.com/v0/b/tasker-f4636.appspot.com/o/Tasker_DEMO%20(1).gif?alt=media&token=29d2ea09-53e0-4dce-8d9d-7a5f611417dd)
 
-## Update Notes
-**(October 9, 2022)**
-- Add drag and drop functionality to application
-- Fix bug where clicking done on task does not take it to completed tasks
-- Add haptics and vibration for touchscreen and mobile users
-- Add task count
-- UI and Styling adjustments
-- Add Footer section at bottom of page
-
 ## Tech Stack
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
