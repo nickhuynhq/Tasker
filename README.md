@@ -56,6 +56,5 @@ $ npm install
 Nicholas Huynh [@nickhuynhq](https://github.com/nickhuynhq)
 
 ## Acknowledgements
-Followed a great tutorial by Piyush from freecodecamp.org which you can [check out here](https://www.youtube.com/watch?v=FJDVKeh7RJI&t)
 
-Also special thanks to [Arctic Ice Studio](https://www.nordtheme.com/docs/colors-and-palettes) for providing the Nord Theme colour palatte!
+Special thanks to [Arctic Ice Studio](https://www.nordtheme.com/docs/colors-and-palettes) for providing the Nord Theme colour palatte!
